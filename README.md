@@ -10,7 +10,7 @@
 
 ## Lectures
 
-1. Ruby Fundammentals
+1. Ruby Fundamentals
 2. Object Oriented Ruby pt1
 3. Object Oriented Ruby pt2
 4. Intro to Databases
