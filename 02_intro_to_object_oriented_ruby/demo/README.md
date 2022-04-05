@@ -40,7 +40,7 @@ If you're looking for a clear and concise example of how to recognize OO vs func
 
 ```rb
 # Functional
-def print_dog(dog)
+def print_dog(dog_hash)
   # ...
 end
 
