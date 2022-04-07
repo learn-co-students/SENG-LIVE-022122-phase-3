@@ -1,4 +1,4 @@
-Dog.create(name: "Lennon",age: "1 year",breed: "Pomeranian",favorite_treats: "cheese")
+# Dog.create(name: "Lennon",age: "1 year",breed: "Pomeranian",favorite_treats: "cheese")
 
 def start_cli
   puts "hello! Welcome to the Dog Walker CLI"
@@ -93,6 +93,7 @@ def feed_dog
   end
   dog = Dog.all[dog_index]
   dog.feed
+  dog.save
   dog.print
 end
 
@@ -109,6 +110,7 @@ def walk_dog
   end
   dog = Dog.all[dog_index]
   dog.walk
+  dog.save
   dog.print
 end
 
