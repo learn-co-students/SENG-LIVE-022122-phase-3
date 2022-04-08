@@ -85,8 +85,8 @@ class Dog
         self.last_fed_at
       )
       @id = DB.execute("SELECT last_insert_rowid()")[0]["last_insert_rowid()"]
+      Dog.all << self
     end
-    # Dog.all << self
     self
   end
 
