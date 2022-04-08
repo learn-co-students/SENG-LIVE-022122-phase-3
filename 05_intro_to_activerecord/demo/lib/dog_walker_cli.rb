@@ -93,7 +93,6 @@ def feed_dog
   end
   dog = prompt_user_to_choose_dog
   dog.feed
-  dog.save
   dog.print
 end
 
@@ -102,7 +101,7 @@ def prompt_user_to_choose_dog
     puts "#{index}. #{dog.name}"
   end
   dog_index = gets.chomp.to_i - 1
-  until dog_index >= 0
+  until dog_index >= 0 && dog_index < Dog.all.length
     puts "Whoops! That didn't work".red
     puts "Please type the number corresponding to the dog you'd like to choose"
     dog_index = gets.chomp.to_i - 1
@@ -117,7 +116,6 @@ def walk_dog
   end
   dog = prompt_user_to_choose_dog
   dog.walk
-  dog.save
   dog.print
 end
 
