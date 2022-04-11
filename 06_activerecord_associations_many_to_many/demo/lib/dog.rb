@@ -1,5 +1,6 @@
 class Dog < ActiveRecord::Base
-  has_many :walks
+  has_many :dog_walks, dependent: :destroy
+  has_many :walks, through: :dog_walks
   has_many :feedings
 
   def self.needs_feeding
