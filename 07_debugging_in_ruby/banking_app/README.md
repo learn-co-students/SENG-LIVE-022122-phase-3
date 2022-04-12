@@ -131,8 +131,8 @@ banks for the first user in the database based on the seed data; and
 
 #### Bank
 
-- `Bank#open_account(user, label, opening_deposit)`
-  - takes a `user` (an instance of the `User` class), a `label` (string) for the account, and an `opening_deposit` (integer or float)
+- `Bank#open_account(user, label, account_type, opening_deposit)`
+  - takes a `user` (an instance of the `User` class), a `label` (string) for the account, an `account_type` (string), and an `opening_deposit` (integer or float)
     as arguments, and creates a new `account` in
     the database associated with this bank and the `user` passed as an argument.
 - `Bank#accounts_summary(user)`
