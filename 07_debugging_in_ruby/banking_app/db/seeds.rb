@@ -30,6 +30,22 @@ puts "Creating Accounts..."
 
 # Create accounts Here
 
+Account.create(
+  balance: 1234,
+  label: "Joe Personal",
+  account_type: "Checking",
+  user_id: joe_shmoe.id,
+  bank_id: bank_of_america.id
+)
+
+Account.create(
+  balance: 123456.78,
+  label: "Jane Saving",
+  account_type: "Savings",
+  user_id: jane_doe.id,
+  bank_id: wells_fargo.id
+)
+
 # ***********************************************************
 
 puts "Seeding done!"
