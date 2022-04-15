@@ -5,16 +5,14 @@ class DogsController < ApplicationController
   end
 
   get "/dogs/:id" do 
-    
+    Dog.find(params[:id]).to_json(methods: [:age])
   end
 
   post "/dogs" do 
-    # puts params
     Dog.create(dog_params).to_json(methods: [:age])
   end
 
   patch "/dogs/:id" do
-    # binding.pry
     dog = Dog.find_by_id(params[:id])
     dog.update(dog_params)
     dog.to_json(methods: [:age])
