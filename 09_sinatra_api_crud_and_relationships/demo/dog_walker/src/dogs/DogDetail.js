@@ -18,7 +18,7 @@ function DogDetail({
   }
 
   const handleAddDogWalkSubmit = (formData) => {
-    addDogWalk(id, formData)
+    addDogWalk(formData)
     toggleShowNewDogWalkForm()
   }
 

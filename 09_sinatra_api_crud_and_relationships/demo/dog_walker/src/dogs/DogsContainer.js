@@ -12,9 +12,7 @@ function DogsContainer() {
   const [dogs, setDogs] = useState([]);
 
   useEffect(() => {
-    fetch(`${process.env.REACT_APP_API_URL}/dogs`, {
-      headers: { Accept: 'application/json' }
-    })
+    fetch(`${process.env.REACT_APP_API_URL}/dogs`)
       .then(res => res.json())
       .then(dogs => setDogs(dogs))
   }, []);
@@ -74,7 +72,7 @@ function DogsContainer() {
     }
   }
 
-  const addDogWalk = (dogId, formData) => {
+  const addDogWalk = (formData) => {
     // pessimistically - don't update the DOM until we get the successful response from the API including an id
     fetch(`${process.env.REACT_APP_API_URL}/dog_walks`, {
       method: 'POST',
